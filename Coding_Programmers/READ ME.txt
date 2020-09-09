@@ -1,4 +1,4 @@
 Coding quizzes are from 
 	https://programmers.co.kr/learn/challenges
 This website is written in Korean.
-If you want to read it in English, check comments in each solution. There is an URL for my blog where I posted the quiz in English.
+If you want to read it in English, check comments in each solution. There is an URL to my blog where I posted the quiz in English.
