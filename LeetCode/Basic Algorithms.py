@@ -189,23 +189,35 @@ Get the Greatest Common Denominator (GCD) between two numbers
 # x is greater or equal to y
 x = 196
 y = 72
-r = y
 
-while r != 0:
+while y != 0:
     temp_x = x
     temp_y = y
-    temp_r = r
     x = temp_y
-    y = temp_r
-    r = x % y
+    y = temp_x % temp_y
 
-print("The Greate Common Denominator is " + str(y))
+print("The Greate Common Denominator is " + str(x))
 
 # result:
-# 
+# The Greate Common Denominator is 4
 '''
+Bucket Sort
+'''
+array = [3, 1, 6, 2, 8, 4, 9] # numbers between 1 to 10
+buckets = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+result = []
 
-'''
+for num in array:
+	buckets[num] = num
+
+for num in buckets:
+	if num != 0:
+		result.append(num)
+
+print(result)
+
+# result:
+# [1, 2, 3, 4, 6, 8, 9]
 '''
 
 '''
