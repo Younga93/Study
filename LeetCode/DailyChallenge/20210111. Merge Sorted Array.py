@@ -38,17 +38,6 @@ class Solution(object):
             nums1[i] = nums2[i-m]
         nums1.sort()
         return nums1
-                    
-        # if n == 0:
-        #     return nums1
-        
-        # nums1.sort()
-        # i = 0
-        # for num in nums2:
-        #     nums1[i] = num
-        #     i += 1
-        # nums1.sort()
-        # return nums1
 
 solution = Solution()
 result = solution.merge([0],0,[1],1)
