@@ -33,16 +33,24 @@ class Solution(object):
         """
         if n == 0:
             return nums1
-        if m == 0:
-            nums1 = nums2
-            return nums1
-
-        j = 0
-        for i in range(m, len(nums1)):
-            nums1[i] = nums2[j]
-            j += 1
-        return sorted(nums1)
+        
+        for i in range(m, n + m):
+            nums1[i] = nums2[i-m]
+        nums1.sort()
+        return nums1
+                    
+        # if n == 0:
+        #     return nums1
+        
+        # nums1.sort()
+        # i = 0
+        # for num in nums2:
+        #     nums1[i] = num
+        #     i += 1
+        # nums1.sort()
+        # return nums1
 
 solution = Solution()
-result = solution.merge([1,2,3,0,0,0], 3, [2,5,6], 3)
+result = solution.merge([0],0,[1],1)
+result = solution.merge([1,2,3,0,0,0],3,[2,5,6],3)
 print(result)
