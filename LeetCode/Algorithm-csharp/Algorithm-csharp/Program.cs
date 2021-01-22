@@ -11,10 +11,9 @@ namespace Algorithm_csharp
         static void Main(string[] args)
         {
             Solution solution = new Solution();
-            int[] nums = { 2, 7, 11, 15 };
-            int target = 9;
-            int[] result = solution.TwoSum(nums, target);
-            DisplayArray(result);
+            int num = 1534236469;
+            int result = solution.Reverse(num);
+            Console.WriteLine(result);
         }
 
         static void DisplayArray(int[] array)

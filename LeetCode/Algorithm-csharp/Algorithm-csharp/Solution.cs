@@ -23,5 +23,33 @@ namespace Algorithm_csharp
             }
             return null;
         }
+        // LeetCode - 7. - Used string Conversion.
+        public int Reverse(int x)
+        {
+            string num;
+            string reversed;
+            if (x < 0)
+            {
+                num = Convert.ToString(x * (-1));
+                reversed = "-";
+            }
+            else
+            {
+                num = Convert.ToString(x);
+                reversed = "";
+            }
+            for (int i = num.Length - 1; i >= 0; i--)
+            {
+                reversed += num.Substring(i, 1);
+            }
+            try
+            {
+                return Convert.ToInt32(reversed);
+            }
+            catch
+            {
+                return 0;
+            }
+        }
     }
 }
