@@ -11,9 +11,7 @@ namespace Algorithm_csharp
         static void Main(string[] args)
         {
             Solution solution = new Solution();
-            int num = 1534236469;
-            int result = solution.Reverse(num);
-            Console.WriteLine(result);
+            Console.WriteLine(solution.IsPalindrome(123421));
         }
 
         static void DisplayArray(int[] array)

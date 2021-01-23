@@ -23,7 +23,7 @@ namespace Algorithm_csharp
             }
             return null;
         }
-        // LeetCode - 7. - Used string Conversion.
+        // LeetCode - 7. Reverse Integer - Used string Conversion.
         public int Reverse(int x)
         {
             string num;
@@ -49,6 +49,34 @@ namespace Algorithm_csharp
             catch
             {
                 return 0;
+            }
+        }
+
+        // LeetCode - 9. Palindrome Number - Used string Conversion.
+        public bool IsPalindrome(int x)
+        {
+            string str = Convert.ToString(x);
+
+            int frontIndex = 0;
+            int backIndex = str.Length - 1;
+            
+
+            while (true)
+            {
+                if (frontIndex >= backIndex)
+                {
+                    return true;
+                }
+                else if(str[frontIndex] == str[backIndex])
+                {
+                    frontIndex++;
+                    backIndex--;
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
     }
