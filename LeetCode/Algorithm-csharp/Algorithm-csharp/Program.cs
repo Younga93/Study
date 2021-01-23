@@ -11,7 +11,7 @@ namespace Algorithm_csharp
         static void Main(string[] args)
         {
             Solution solution = new Solution();
-            Console.WriteLine(solution.IsPalindrome(123421));
+            Console.WriteLine(solution.RomanToInt("MCMXCIV"));
         }
 
         static void DisplayArray(int[] array)

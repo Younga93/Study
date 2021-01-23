@@ -79,5 +79,37 @@ namespace Algorithm_csharp
                 }
             }
         }
+        // LeetCode - 13. Roman to Integer - Using Ditionary
+        public int RomanToInt(string s)
+        {
+            int answer = 0;
+            s += " ";
+            char[] chars = s.ToCharArray();
+
+            Dictionary<char, int> Roman = new Dictionary<char, int>();
+            Roman.Add(' ', 0);
+            Roman.Add('I', 1);
+            Roman.Add('V', 5);
+            Roman.Add('X', 10);
+            Roman.Add('L', 50);
+            Roman.Add('C', 100);
+            Roman.Add('D', 500);
+            Roman.Add('M', 1000);
+
+            for (int i = 0; i < chars.Length - 1; i++)
+            {
+                if (Roman[chars[i + 1]] > Roman[chars[i]])
+                {
+                    answer -= Roman[chars[i]];
+                    answer += Roman[chars[i + 1]];
+                    i++;
+                }
+                else
+                {
+                    answer += Roman[chars[i]];
+                }
+            }
+            return answer;
+        }
     }
 }
