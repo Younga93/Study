@@ -11,7 +11,8 @@ namespace Algorithm_csharp
         static void Main(string[] args)
         {
             Solution solution = new Solution();
-            Console.WriteLine(solution.RomanToInt("MCMXCIV"));
+            string[] strs = {"flower", "flow", "flight"};
+            Console.WriteLine(solution.LongestCommonPrefix(strs));
         }
 
         static void DisplayArray(int[] array)
