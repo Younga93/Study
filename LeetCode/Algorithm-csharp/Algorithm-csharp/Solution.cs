@@ -133,5 +133,27 @@ namespace Algorithm_csharp
             }
             return strs[0];
         }
+        // LeetCode - 20. Valid Parentheses - Using Replace method
+
+        public bool IsValid(string s)
+        {
+            string[] validSet = { "[]", "{}", "()" };
+
+            while (s.Contains("[]") || s.Contains("{}") || s.Contains("()"))
+            {
+                s = s.Replace(validSet[0], "");
+                s = s.Replace(validSet[1], "");
+                s = s.Replace(validSet[2], "");
+            }
+
+            if (s == "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -11,8 +11,9 @@ namespace Algorithm_csharp
         static void Main(string[] args)
         {
             Solution solution = new Solution();
-            string[] strs = {"flower", "flow", "flight"};
-            Console.WriteLine(solution.LongestCommonPrefix(strs));
+            Console.WriteLine(solution.IsValid("(]"));
+            Console.WriteLine(solution.IsValid("([)]"));
+            Console.WriteLine(solution.IsValid("{[]}"));
         }
 
         static void DisplayArray(int[] array)
