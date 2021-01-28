@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -134,16 +135,13 @@ namespace Algorithm_csharp
             return strs[0];
         }
         // LeetCode - 20. Valid Parentheses - Using Replace method
-
-        public bool IsValid(string s)
+        public bool IsValid1(string s)
         {
-            string[] validSet = { "[]", "{}", "()" };
-
             while (s.Contains("[]") || s.Contains("{}") || s.Contains("()"))
             {
-                s = s.Replace(validSet[0], "");
-                s = s.Replace(validSet[1], "");
-                s = s.Replace(validSet[2], "");
+                s = s.Replace("[]", "");
+                s = s.Replace("{}", "");
+                s = s.Replace("()", "");
             }
 
             if (s == "")
@@ -153,6 +151,75 @@ namespace Algorithm_csharp
             else
             {
                 return false;
+            }
+        }
+        // LeetCode - 20. Valid Parentheses - Using Stack
+        public bool IsValid(string s)
+        {
+            if ( string.IsNullOrWhiteSpace(s) )
+            {
+                return false;
+            }
+
+            Stack<char> myStack = new Stack<char>();
+
+            Dictionary<char, char> validSet = new Dictionary<char, char>();
+            validSet.Add('{', '}');
+            validSet.Add('[', ']');
+            validSet.Add('(', ')');
+
+            foreach (char l in s)
+            {
+                if (validSet.ContainsKey(l)) //(validSet.ContainsKey(l))
+                {
+                    myStack.Push(l);
+                }
+                else //not 0 // if (validSet.ContainsValue(l))
+                {
+                    if (myStack.Count != 0 && validSet[myStack.Peek()] == l)
+                        myStack.Pop();
+                    else
+                        return false;
+                }
+            }
+
+            return myStack.Count == 0 ? true : false;
+        }
+        // LeetCode - 21. Merge Two Sorted Lists
+        public ListNode MergeTwoLists(ListNode l1, ListNode l2)
+        {
+            if (l1 == null)
+                return l2;
+            if (l2 == null)
+                return l1;
+
+            ListNode head = new ListNode();
+            ListNode walk = head;
+            while (true)
+            {
+                if (l1.val < l2.val)
+                {
+                    walk.next = l1;
+                    l1 = l1.next;
+                }
+                else
+                {
+                    walk.next = l2;
+                    l2 = l2.next;
+                }
+                walk = walk.next;
+
+                if (l1 == null)
+                {
+                    walk.next = l2;
+                    return head.next;
+                }
+                if (l2 == null)
+                {
+                    walk.next = l1;
+                    return head.next;
+                }
+                
             }
         }
     }
