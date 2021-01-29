@@ -17,10 +17,15 @@ namespace Algorithm_csharp
             //Console.WriteLine(solution.IsValid("{[]}"));//T
             //Console.WriteLine(solution.IsValid("([)]"));//F
 
-            ListNode l1 = new ListNode(1, new ListNode(2, new ListNode(4)));
-            ListNode l2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+            //ListNode l1 = new ListNode(1, new ListNode(2, new ListNode(4)));
+            //ListNode l2 = new ListNode(1, new ListNode(3, new ListNode(4)));
 
-            DisplayList(solution.MergeTwoLists(l1,l2));
+            //DisplayList(solution.MergeTwoLists(l1,l2));
+
+            //Display Array
+            //Console.WriteLine(String.Join(",", new int[] { 1,2,3,4,5}));
+
+            Console.WriteLine("{0}",solution.RemoveDuplicates(new int[] {1,1,2}));
         }
         static void DisplayList(ListNode list)
         {
@@ -31,25 +36,6 @@ namespace Algorithm_csharp
                 list = list.next;
             }
             Console.Write("]");
-        }
-        static void DisplayArray(int[] array)
-        {
-            if (array == null)
-            {
-                Console.WriteLine("null");
-            }
-            else
-            {
-                Console.Write("{");
-                for (int i = 0; i < array.Length; i++)
-                {
-                    if (i == array.Length - 1)
-                        Console.Write(array[i]);
-                    else
-                        Console.Write(array[i] + ", ");
-                }
-                Console.WriteLine("}");
-            }
         }
     }
 }

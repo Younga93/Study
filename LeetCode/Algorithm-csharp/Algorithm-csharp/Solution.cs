@@ -222,5 +222,20 @@ namespace Algorithm_csharp
                 
             }
         }
+        // LeetCode - 26. Remove Duplicates from Sorted Array
+        public int RemoveDuplicates(int[] nums)
+        {
+            if (nums.Length == 0)
+                return 0;
+            int index = 0;
+            for (int i = 1; i < nums.Length; i++)
+            {
+                if (nums[index] != nums[i])
+                {
+                    nums[++index] = nums[i];
+                }
+            }
+            return ++index; //Prefix increment because it requires the length of the array, not the index of the last element.
+        }
     }
 }
