@@ -25,7 +25,10 @@ namespace Algorithm_csharp
             //Display Array
             //Console.WriteLine(String.Join(",", new int[] { 1,2,3,4,5}));
 
-            Console.WriteLine("{0}",solution.RemoveDuplicates(new int[] {1,1,2}));
+            //Console.WriteLine("{0}",solution.RemoveDuplicates(new int[] {1,1,2}));
+            int[] nums = new int[] { 3, 2, 2, 3 };
+            Console.WriteLine("{0}",solution.RemoveElement(nums, 3));
+            Console.WriteLine(String.Join(", ", nums));
         }
         static void DisplayList(ListNode list)
         {
