@@ -243,11 +243,11 @@ namespace Algorithm_csharp
             if (nums.Length == 0)
                 return 0;
             int index = 0;
-            for (int i = 0; i < nums.Length; i++)
+            foreach (int num in nums)
             {
-                if (nums[i] != val) 
+                if (num != val) 
                 {
-                    nums[index] = nums[i];
+                    nums[index] = num;
                     index++;
                 }
             }
