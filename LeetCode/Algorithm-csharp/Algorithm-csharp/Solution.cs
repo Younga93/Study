@@ -253,5 +253,16 @@ namespace Algorithm_csharp
             }
             return index;
         }
+        // LeetCode - 28. Implement strStr()
+        public int StrStr(string haystack, string needle)
+        {
+            if (string.IsNullOrEmpty(needle))
+                return 0;
+            else if (string.IsNullOrEmpty(haystack))
+                return -1;
+            if (!haystack.Contains(needle))
+                return -1;
+            return haystack.IndexOf(needle);
+        }
     }
 }
