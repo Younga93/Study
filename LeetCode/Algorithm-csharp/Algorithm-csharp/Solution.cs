@@ -260,9 +260,20 @@ namespace Algorithm_csharp
                 return 0;
             else if (string.IsNullOrEmpty(haystack))
                 return -1;
-            if (!haystack.Contains(needle))
-                return -1;
-            return haystack.IndexOf(needle);
+            //if (!haystack.Contains(needle))
+            //    return -1;
+            //return haystack.IndexOf(needle); < should not use this function since I am implementing this!! LOL
+
+            string temp;
+            int index = 0;
+            while (index <= haystack.Length - needle.Length)
+            {
+                temp = haystack.Substring(index, needle.Length);
+                if (temp == needle)
+                    return index;
+                index++;
+            }
+            return -1;
         }
     }
 }
