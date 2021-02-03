@@ -287,5 +287,37 @@ namespace Algorithm_csharp
             }
             return nums.Length;
         }
+        // LeetCode - 38. Count and Say
+        public string CountAndSay(int n)
+        {
+            if (n == 1)
+                return "1";
+            string result = "1";
+
+            int digit = Convert.ToInt32(result.Substring(0,1));
+            int counter = 1;
+            string temp = "";
+            while (n != 1)
+            {
+                for (int i = 1; i < result.Length; i++)
+                {
+                    if (digit == Convert.ToInt32(result.Substring(i, 1)))
+                        counter++;
+                    else
+                    {
+                        temp += Convert.ToString(counter) + Convert.ToString(digit);
+                        digit = Convert.ToInt32(result.Substring(i, 1));
+                        counter = 1;
+                    }
+                }
+                result = temp + Convert.ToString(counter) + Convert.ToString(digit);
+                temp = "";
+                n--;
+                digit = Convert.ToInt32(result.Substring(0, 1));
+                counter = 1;
+            }
+
+            return result;
+        }
     }
 }

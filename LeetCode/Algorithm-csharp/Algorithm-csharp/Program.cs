@@ -38,13 +38,23 @@ namespace Algorithm_csharp
             //Console.WriteLine(solution.StrStr(haystack, needle));
 
             //35
-            int[] nums = { 1, 3, 5, 6 };
-            Console.WriteLine(solution.SearchInsert(nums, 5));
-            Console.WriteLine(solution.SearchInsert(nums, 2));
-            Console.WriteLine(solution.SearchInsert(nums, 7));
-            Console.WriteLine(solution.SearchInsert(nums, 0));
-            Console.WriteLine(solution.SearchInsert(new int[] { 1 }, 0));
+            //int[] nums = { 1, 3, 5, 6 };
+            //Console.WriteLine(solution.SearchInsert(nums, 5));
+            //Console.WriteLine(solution.SearchInsert(nums, 2));
+            //Console.WriteLine(solution.SearchInsert(nums, 7));
+            //Console.WriteLine(solution.SearchInsert(nums, 0));
+            //Console.WriteLine(solution.SearchInsert(new int[] { 1 }, 0));
 
+            Console.WriteLine(solution.CountAndSay(1));
+            Console.WriteLine(solution.CountAndSay(2));
+            Console.WriteLine(solution.CountAndSay(3));
+            Console.WriteLine(solution.CountAndSay(4));
+            Console.WriteLine(solution.CountAndSay(5));
+            Console.WriteLine(solution.CountAndSay(6));
+            Console.WriteLine(solution.CountAndSay(7));
+            Console.WriteLine(solution.CountAndSay(8));
+            Console.WriteLine(solution.CountAndSay(9));
+            Console.WriteLine(solution.CountAndSay(10));
 
             //Display Array
             //Console.WriteLine(String.Join(",", new int[] { 1,2,3,4,5}));
