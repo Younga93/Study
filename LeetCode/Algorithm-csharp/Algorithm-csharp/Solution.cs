@@ -294,11 +294,13 @@ namespace Algorithm_csharp
                 return "1";
             string result = "1";
 
-            int digit = Convert.ToInt32(result.Substring(0,1));
-            int counter = 1;
+            int digit;
+            int counter;
             string temp = "";
             while (n != 1)
             {
+                digit = Convert.ToInt32(result.Substring(0, 1));
+                counter = 1;
                 for (int i = 1; i < result.Length; i++)
                 {
                     if (digit == Convert.ToInt32(result.Substring(i, 1)))
@@ -313,8 +315,6 @@ namespace Algorithm_csharp
                 result = temp + Convert.ToString(counter) + Convert.ToString(digit);
                 temp = "";
                 n--;
-                digit = Convert.ToInt32(result.Substring(0, 1));
-                counter = 1;
             }
 
             return result;
