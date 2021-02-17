@@ -319,5 +319,19 @@ namespace Algorithm_csharp
 
             return result;
         }
+        // LeetCode - 53. Maximum Subarray
+        public int MaxSubArray(int[] nums) {
+            // just watched https://www.youtube.com/watch?v=2MmGzdiKR9Y
+            //if only one number is in the array, don't have to calculate the sum
+            int finalMax = nums[0];
+            int currentMax = nums[0];
+            for (int i = 1; i < nums.Length; i++)
+            {
+                currentMax = Math.Max(currentMax + nums[i], nums[i]);
+                finalMax = Math.Max(finalMax, currentMax);
+            }
+
+            return finalMaxs;
+        }
     }
 }
