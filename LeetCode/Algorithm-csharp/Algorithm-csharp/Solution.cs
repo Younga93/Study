@@ -331,7 +331,7 @@ namespace Algorithm_csharp
                 finalMax = Math.Max(finalMax, currentMax);
             }
 
-            return finalMaxs;
+            return finalMax;
         }
     }
 }
